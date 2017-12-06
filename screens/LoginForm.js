@@ -7,33 +7,30 @@ export default class LoginForm extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.textStyle}>
-          EMAIL ADDRESS
-        </Text>
         <TextInput
           returnKeyType='next'
           onSubmitEditing={ () => this.passwordInput.focus()}
+          placeholder='Email'
           keyboardType='email-address'
           keyboardAppearance='dark'
           autoCapitalize='none'
           autoCorrect         ={false}
           style={styles.input}
         />
-        <Text style={styles.textStyle}>
-          PASSWORD
-        </Text>
         <TextInput
           secureTextEntry
           returnKeyType='go'
+          placeholder='Password'
           keyboardAppearance='dark'
           style={styles.input}
           ref={(input) => this.passwordInput = input}
         />
         <View style={styles.submitBtn}>
+          <TouchableOpacity onPress={this._onPressButton}>
+            <Text style={styles.topBarButton}>Forgot password</Text>
+          </TouchableOpacity>
           <TouchableOpacity>
-            <Text>
               <Ionicons name='ios-arrow-dropright' size={52} color='rgb(51, 149, 255)'/>
-            </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -43,14 +40,19 @@ export default class LoginForm extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20
+    paddingLeft: 20,
+    paddingTop: 80,
+    paddingRight: 20,
+    paddingBottom: 20
   },
   input: {
-    height: 40,
-    backgroundColor: '#ffffff',
-    borderBottomWidth: 1,
-    borderColor: 'rgb(90, 200, 255)',
-    marginBottom: 20,
+    height: 60,
+    backgroundColor: '#eee',
+    borderRadius: 30,
+    paddingLeft: 20,
+    // borderBottomWidth: 1,
+    // borderColor: 'rgb(90, 200, 255)',
+    marginBottom: 25,
     fontSize: 16,
     color: '#333',
   },
@@ -59,8 +61,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  topBarButton: {
+    marginTop: -40,
+    color: 'steelblue',
+    fontSize: 18
+  },
   submitBtn: {
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'flex-end',
   }
 });

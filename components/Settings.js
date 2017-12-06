@@ -3,17 +3,24 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-nati
 import { Entypo, MaterialCommunityIcons } from '@expo/vector-icons'
 import AlertFeeds from './AlertFeeds.js'
 
+
+          // <View style={styles.listOfSettings}>
+          //   <TouchableOpacity style={styles.buttonStyle}>
+          //     <View style={styles.addAlerts}>
+          //       <Text style={styles.signOutText}>
+          //         Sign out
+          //       </Text>
+          //     </View>
+          //   </TouchableOpacity>
+          // </View>
+
 export default class Settings extends React.Component {
+  navigateToLoginPage = () => {
+    this.props.navigation.navigate('Login');
+  };
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.topContainer}>
-          <View style={styles.heading}>
-            <Text style={styles.title}>
-              Settings
-            </Text>
-          </View>
-        </View>
         <ScrollView>
           <View style={styles.listOfSettings}>
             <TouchableOpacity style={styles.buttonStyle}>
@@ -31,17 +38,16 @@ export default class Settings extends React.Component {
                 </Text>
               </View>
             </TouchableOpacity>
-          </View>
 
-          <View style={styles.listOfSettings}>
-            <TouchableOpacity style={styles.buttonStyle}>
+            <TouchableOpacity style={styles.buttonStyle} onPress={this.navigateToLoginPage}>
               <View style={styles.addAlerts}>
-                <Text style={styles.signOutText}>
-                  Sign out
+                <Text style={styles.buttonText}>
+                  Sign in
                 </Text>
               </View>
             </TouchableOpacity>
           </View>
+
         </ScrollView>
       </View>
     )

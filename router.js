@@ -4,7 +4,7 @@ import { TabNavigator, StackNavigator } from 'react-navigation'
 import { FontAwesome, Entypo, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
 
 import Welcome from './components/Welcome.js'
-import Login from './components/Login.js'
+import Login from './screens/Login.js'
 import Alerts from './components/Alerts.js'
 import AddAlerts from './components/AddAlerts.js'
 import Home from './components/Home.js'
@@ -25,6 +25,14 @@ export const AlertsScreen = StackNavigator({
   }
 });
 
+export const SettingsScreen = StackNavigator({
+  SettingsScreen: {
+    screen: Settings,
+    navigationOptions: {
+      title: 'Settings'
+    }
+  }
+});
 
 export const Tabs = TabNavigator({
   Alerts: {
@@ -42,7 +50,7 @@ export const Tabs = TabNavigator({
     }
   },
   Settings: {
-    screen: Settings,
+    screen: SettingsScreen,
     navigationOptions: {
       tabBarLabel: 'Settings',
       tabBarIcon: ({ tintColor }) => <Ionicons name='ios-settings' size={24} color={tintColor}/>
@@ -84,10 +92,16 @@ export const Tabs = TabNavigator({
 export const Root = StackNavigator({
   Tabs: {
     screen: Tabs,
+  },
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      title: 'Sign in'
+    }
   }
 },{
     mode: 'model',
-    headerMode: 'none'
+    headerMode: 'none',
 })
 
 const styles = StyleSheet.create({

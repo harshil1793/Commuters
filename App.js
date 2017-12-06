@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Splash from './components/Splash.js'
 import Welcome from './components/Welcome.js'
-import Login from './components/Login.js'
+import Login from './screens/Login.js'
 import CreateAccount from './components/CreateAccount.js'
 import Alerts from './components/Alerts.js'
 import AddAlerts from './components/AddAlerts.js'
@@ -12,10 +12,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-        <Root/>
+        // <Root/>
         // <Splash/>
         // <Welcome/>
-        // <Login/>
+        <Login/>
         // <CreateAccount/>
         // <Alerts/>
         // <Tabs/>
