@@ -1,17 +1,19 @@
 const api =  'http://localhost:3000'
 
-let token = localStorage.token
-
-if (!token)
-  token = localStorage.token = Math.random().toString(36).substr(-8)
+// let token = localStorage.token
+//
+// if (!token)
+//   token = localStorage.token = Math.random().toString(36).substr(-8)
 
 const headers = {
   'Accept': 'application/json'
 }
 
 export const getAll = () =>
-  fetch(`${api}/users`, { headers })
+  fetch(`${api}/categories`, { headers })
     .then(res => res.json())
+    .then(data => data.contacts)
+
 
 // export const remove = (contact) =>
 //   fetch(`${api}/contacts/${contact.id}`, { method: 'DELETE', headers })

@@ -13,7 +13,7 @@ import LoginForm from '../screens/LoginForm.js'
 export default class Login extends React.Component {
   navigateToSettingsPage = () => {
     this.props.navigation.goBack(null);
-  };
+  }
   render() {
     return (
       <KeyboardAvoidingView behavior='padding' style={styles.container}>

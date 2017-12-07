@@ -12,10 +12,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-        // <Root/>
+        <Root/>
         // <Splash/>
         // <Welcome/>
-        <Login/>
+        // <Login/>
         // <CreateAccount/>
         // <Alerts/>
         // <Tabs/>
