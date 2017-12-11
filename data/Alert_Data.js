@@ -4,7 +4,8 @@ export const alerts = [
     "title": "E",
     "comment": "Not in service in weekends.",
     "location": "42 PABT",
-    "date": "Nov 30",
+    "month": "Nov",
+    "date": "30",
     "time": "08:14",
     "status": "Closed",
     "likes": 12
@@ -14,7 +15,8 @@ export const alerts = [
     "title": "Train A",
     "comment": "In service in weekends.",
     "location": "42 PABT",
-    "date": "Nov 25",
+    "month": "Nov",
+    "date": "30",
     "time": "08:14",
     "status": "Open",
     "likes": 10
@@ -24,7 +26,8 @@ export const alerts = [
     "title": "Train A",
     "comment": "In service in weekends.",
     "location": "42 PABT",
-    "date": "Nov 25",
+    "month": "Nov",
+    "date": "30",
     "time": "08:14",
     "status": "Closed",
     "likes": 5
@@ -34,7 +37,8 @@ export const alerts = [
     "title": "Train A",
     "comment": "In service in weekends.",
     "location": "42 PABT",
-    "date": "Nov 25",
+    "month": "Nov",
+    "date": "30",
     "time": "08:14",
     "status": "Closed",
     "likes": 11
@@ -44,7 +48,8 @@ export const alerts = [
     "title": "Train A",
     "comment": "In service in weekends.",
     "location": "42 PABT",
-    "date": "Nov 25",
+    "month": "Nov",
+    "date": "30",
     "time": "08:14",
     "status": "Open",
     "likes": 18
@@ -54,7 +59,8 @@ export const alerts = [
     "title": "Train A",
     "comment": "In service in weekends.",
     "location": "42 PABT",
-    "date": "Nov 25",
+    "month": "Nov",
+    "date": "30",
     "time": "08:14",
     "status": "Closed",
     "likes": 14
@@ -64,7 +70,8 @@ export const alerts = [
     "title": "Train A",
     "comment": "In service in weekends.",
     "location": "42 PABT",
-    "date": "Nov 25",
+    "month": "Nov",
+    "date": "30",
     "time": "08:14",
     "status": "Closed",
     "likes": 27

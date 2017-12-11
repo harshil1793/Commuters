@@ -10,17 +10,39 @@ import AddAlerts from './components/AddAlerts.js'
 import Home from './components/Home.js'
 import Settings from './components/Settings.js'
 
+import Comments from './screens/Comments.js'
+import CommentsFeed from './screens/CommentsFeed.js'
+import SetNotification from './screens/SetNotification.js'
+
 export const AlertsScreen = StackNavigator({
   AlertsScreen: {
     screen: Alerts,
     navigationOptions: {
       title: 'Alerts'
     }
+  }
+});
+
+export const CommentsScreen = StackNavigator({
+  CommentsScreen: {
+    screen: Comments,
+    navigationOptions: {
+      title: 'Comments'
+    }
   },
   AddAlerts: {
     screen: AddAlerts,
     navigationOptions: {
       title: 'Create Alert'
+    }
+  }
+});
+
+export const SetNotificationScreen = StackNavigator({
+  SetNotificationScreen: {
+    screen: SetNotification,
+    navigationOptions: {
+      title: 'Set Time'
     }
   }
 });
@@ -35,6 +57,13 @@ export const SettingsScreen = StackNavigator({
 });
 
 export const Tabs = TabNavigator({
+  Comments: {
+    screen: CommentsScreen,
+    navigationOptions: {
+      tabBarLabel: 'Comments',
+      tabBarIcon: ({ tintColor }) => <FontAwesome name='comment' size={24} color={tintColor}/>
+    }
+  },
   Alerts: {
     screen: AlertsScreen,
     navigationOptions: {
@@ -47,6 +76,13 @@ export const Tabs = TabNavigator({
     navigationOptions: {
       tabBarLabel: 'Home',
       tabBarIcon: ({ tintColor }) => <Entypo name='home' size={24} color={tintColor}/>
+    }
+  },
+  SetNotification: {
+    screen: SetNotificationScreen,
+    navigationOptions: {
+      tabBarLabel: 'Set Time',
+      tabBarIcon: ({ tintColor }) => <Ionicons name='ios-timer' size={24} color={tintColor}/>
     }
   },
   Settings: {
