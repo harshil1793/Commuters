@@ -12,8 +12,7 @@ export default class CommentFeeds extends React.Component {
     super(props)
 
     this.state = {
-      comments: [],
-      like: 0
+      comments: []
     }
   }
 

@@ -11,8 +11,7 @@ export default class Home extends React.Component {
         <View style={styles.map}>
           <Map/>
         </View>
-        <View>
-        </View>
+        <TrainList />
       </View>
     )
   }
@@ -31,6 +30,5 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     position: 'absolute'
-
   }
 })

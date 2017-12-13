@@ -70,15 +70,15 @@ export default class Map extends React.Component {
   render() {
     return (
         <MapView
-          style={styles.map}
-          region={this.state.initialPosition}>
+        style={styles.map}
+        region={this.state.initialPosition}>
           <MapView.Marker
             coordinate={this.state.markerPosition}>
             <View style={styles.radius}>
               <View style={styles.marker}/>
             </View>
           </MapView.Marker>
-         </MapView>
+        </MapView>
     )
   }
 }
@@ -115,6 +115,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#007aff',
     borderWidth: 3,
     borderColor: 'white'
-
-  }
+  },
 })

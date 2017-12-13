@@ -5,6 +5,7 @@ import { alerts } from '../data/Alert_Data'
 import SVGImage from 'react-native-svg-image';
 
 import * as AlertsAPI from '../utils/AlertsAPI'
+// import MTA from 'mta-gtfs'
 
 export default class AlertFeeds extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class AlertFeeds extends React.Component {
     AlertsAPI.getAll().then((alerts) => {
       this.setState({ alerts })
     })
+
   }
   render() {
     const alertsData = this.state.alerts
